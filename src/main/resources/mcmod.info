@@ -1,0 +1,21 @@
+[
+{
+  "modid": "BuildcentricTweeks",
+  "name": "BuildcentricTweeks",
+  "description": "Small tweeks for the Buildcentric modpack",
+  "version": "1.0.0",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Gigabit101"
+    
+  ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
