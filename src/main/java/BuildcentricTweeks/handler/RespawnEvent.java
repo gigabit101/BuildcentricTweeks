@@ -1,4 +1,4 @@
-package BuildcentricTweeks;
+package BuildcentricTweeks.handler;
 
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -7,7 +7,7 @@ import net.minecraft.world.WorldSettings.GameType;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 
-public class RespawnEvent 
+public class RespawnEvent
 {
 	public static final RespawnEvent instancemain = new RespawnEvent();
 	
@@ -17,6 +17,9 @@ public class RespawnEvent
 		if (event.isCancelable())
 			return;
 		
-		event.player.setGameType(GameType.SURVIVAL);
+		if(!event.player.capabilities.allowEdit)
+		{
+			event.player.setGameType(GameType.SURVIVAL);
+		}
 	}
 }
