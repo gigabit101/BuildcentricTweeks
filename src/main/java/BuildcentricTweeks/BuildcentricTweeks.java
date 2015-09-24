@@ -1,5 +1,6 @@
 package BuildcentricTweeks;
 
+import BuildcentricTweeks.handler.HorseKillerEvent;
 import BuildcentricTweeks.handler.RespawnEvent;
 import BuildcentricTweeks.init.ModBlocks;
 import BuildcentricTweeks.lib.ModInfo;
@@ -17,5 +18,6 @@ public class BuildcentricTweeks
 	{
 		ModBlocks.init();
 		FMLCommonHandler.instance().bus().register(new RespawnEvent());
+		MinecraftForge.EVENT_BUS.register(new HorseKillerEvent());		
 	}
 }
