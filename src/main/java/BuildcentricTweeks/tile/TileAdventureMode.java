@@ -88,4 +88,20 @@ public class TileAdventureMode extends TileEntity
 				whatPlayerIsNearSURVIVAL().setGameType(GameType.SURVIVAL);
 		}
 	}
+	
+	@Override
+	public void writeToNBT(NBTTagCompound nbt) 
+	{
+		super.writeToNBT(nbt);
+		nbt.setDouble("searchDistance", searchDistance);
+		nbt.setDouble("searchDistance2", searchDistance2);
+	}
+	
+	@Override
+	public void readFromNBT(NBTTagCompound nbt) 
+	{
+		super.readFromNBT(nbt);
+		nbt.getDouble("searchDistance");
+		nbt.getDouble("searchDistance2");
+	}
 }
